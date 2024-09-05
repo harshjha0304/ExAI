@@ -88,8 +88,8 @@ class DataGen:
 
     def shuffle_image_label_lists_together(self):
         combined = list(zip(self.image_file_list, self.label_file_list))
-        random.shuffle(combined)
-        return zip(*combined)
+        image_file_list, label_file_list  = zip(*combined)
+        return image_file_list, label_file_list
 
     @staticmethod
     def change_color_space(image, label, color_space):
