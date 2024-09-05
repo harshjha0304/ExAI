@@ -14,8 +14,8 @@ class DataGen:
         self.y = y
         self.path = path
         self.color_space = color_space
-        self.path_train_images = path + "train/images/"
-        self.path_train_labels = path + "train/labels/"
+        self.path_train_images = os.path.join(self.path, 'images')  
+        self.path_train_labels = os.path.join(self.path, 'labels')
         self.path_test_images = path + "test/images/"
         self.path_test_labels = path + "test/labels/"
         self.image_file_list = get_png_filename_list(self.path_train_images)
